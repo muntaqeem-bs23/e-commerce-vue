@@ -1,7 +1,7 @@
 <template>
   <div>
     <CatComponent :categories="categories"/>
-    <FeaturedCat />  
+    <FeaturedCat />
   </div>
   
 </template>
@@ -16,14 +16,28 @@ export default {
     CatComponent,
     FeaturedCat
   },
-  props: {
-    categories: Array,
-  },
   data: function () {
     return {
       searchValue: "",
       slide: 0,
       sliding: null,
+      categories: [
+        {
+          name: "Men",
+          children: []
+        },
+        {
+          name: "Women",
+          children: []
+        },
+        {
+          name: "Electronics",
+          children: [
+            "Accessories",
+            "Computer"
+          ]
+        }
+      ],
     };
   },
   methods: {

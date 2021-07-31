@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <HomePage :categories="categories" />
+    <!-- <HomePage :categories="categories" /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
-import HomePage from "./pages/HomePage.vue";
+import router from './router';
 
 import "@/assets/css/all.css";
 import "@/assets/css/bootstrap.css";
@@ -20,30 +21,9 @@ import "@/assets/css/wishlist.css";
 
 export default {
   name: "App",
+  router: router,
   components: {
     HeaderComponent,
-    HomePage,
-  },
-  data: function () {
-    return {
-      categories: [
-        {
-          name: "Men",
-          children: []
-        },
-        {
-          name: "Women",
-          children: []
-        },
-        {
-          name: "Electronics",
-          children: [
-            "Accessories",
-            "Computer"
-          ]
-        }
-      ],
-    };
   },
 };
 </script>

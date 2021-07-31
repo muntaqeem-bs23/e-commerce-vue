@@ -17,7 +17,7 @@
                         </a>
                     </span>
                     <span class="d-inline-block cart-icon">
-                        <a @click="goToCart()">
+                        <a href="/cart">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                         <span class="cart-number">
