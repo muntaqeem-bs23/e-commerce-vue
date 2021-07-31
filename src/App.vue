@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <HeaderComponent />
+    <HomePage :categories="categories"/>
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
+import HomePage from './pages/HomePage.vue';
 
 import "@/assets/css/all.css";
 import "@/assets/css/bootstrap.css";
@@ -19,7 +21,13 @@ import "@/assets/css/wishlist.css";
 export default {
   name: 'App',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    HomePage
+  },
+  data: function () {
+    return {
+      categories: ['Men', "Women", "Electronics"]
+    }
   }
 }
 </script>

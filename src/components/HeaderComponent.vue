@@ -17,7 +17,7 @@
                         </a>
                     </span>
                     <span class="d-inline-block cart-icon">
-                        <a href="">
+                        <a @click="goToCart()">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                         <span class="cart-number">
@@ -32,7 +32,17 @@
 
 <script>
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    data: function() {
+        return {
+            msg: "This is my page"
+        }
+    },
+    methods: {
+        goToCart: function() {
+            console.log('I am in the cart');
+        }
+    }
 }
 </script>
 
