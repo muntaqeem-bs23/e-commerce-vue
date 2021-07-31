@@ -26,7 +26,23 @@ export default {
   },
   data: function () {
     return {
-      categories: ["Men", "Women", "Electronics"],
+      categories: [
+        {
+          name: "Men",
+          children: []
+        },
+        {
+          name: "Women",
+          children: []
+        },
+        {
+          name: "Electronics",
+          children: [
+            "Accessories",
+            "Computer"
+          ]
+        }
+      ],
     };
   },
 };
