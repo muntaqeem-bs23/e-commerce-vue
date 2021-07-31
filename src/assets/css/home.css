@@ -26,6 +26,7 @@
     color: #5480d5;
     display: block;
     position: relative;
+    text-decoration: none;
 }
 
 .category-list ul li {
@@ -105,6 +106,7 @@
     padding: 15px 70px 15px 40px;
     color: #444;
     position: relative;
+    border: none;
 }
 
 .product-search .input-group .btn-group .dropdown button:before {

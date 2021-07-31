@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <HomePage :categories="categories"/>
+    <HomePage :categories="categories" />
   </div>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue';
-import HomePage from './pages/HomePage.vue';
+import HeaderComponent from "./components/HeaderComponent.vue";
+import HomePage from "./pages/HomePage.vue";
 
 import "@/assets/css/all.css";
 import "@/assets/css/bootstrap.css";
@@ -19,17 +19,17 @@ import "@/assets/css/style.css";
 import "@/assets/css/wishlist.css";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderComponent,
-    HomePage
+    HomePage,
   },
   data: function () {
     return {
-      categories: ['Men', "Women", "Electronics"]
-    }
-  }
-}
+      categories: ["Men", "Women", "Electronics"],
+    };
+  },
+};
 </script>
 
 <style>
@@ -37,7 +37,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

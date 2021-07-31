@@ -39,33 +39,29 @@
         </div>
         <div class="col-md-8">
           <div class="product-search">
-              <div class="input-group">
-                <input
-                  v-model="searchValue"
-                  type="text"
-                  class="product-search-input form-control"
-                  placeholder="Search Product"
-                />
-                <p>{{searchValue}}</p>
-                <div class="btn-group">
-                  <div>
-                    <b-dropdown
-                      id="dropdown-1"
-                      text="Categories"
-                      class="m-md-2"
+            <div class="input-group">
+              <input
+                v-model="searchValue"
+                type="text"
+                class="product-search-input form-control"
+                placeholder="Search Product"
+              />
+              <p>{{ searchValue }}</p>
+              <div class="btn-group">
+                <div>
+                  <b-dropdown id="dropdown-1" text="Categories">
+                    <b-dropdown-item
+                      v-for="(item, index) in categories"
+                      :key="index"
+                      >{{ item }}</b-dropdown-item
                     >
-                      <b-dropdown-item
-                        v-for="(item, index) in categories"
-                        :key="index"
-                        >{{ item }}</b-dropdown-item
-                      >
-                    </b-dropdown>
-                  </div>
-                  <button class="btn search-button" @click="onSearch()">
-                    <i class="fas fa-search"></i>
-                  </button>
+                  </b-dropdown>
                 </div>
+                <button class="btn search-button" @click="onSearch()">
+                  <i class="fas fa-search"></i>
+                </button>
               </div>
+            </div>
           </div>
           <div class="sale-carousel">
             <b-carousel
@@ -116,28 +112,28 @@ export default {
   props: {
     categories: Array,
   },
-  data: function() {
+  data: function () {
     return {
       searchValue: "",
       slide: 0,
-      sliding: null
-    }
+      sliding: null,
+    };
   },
   methods: {
     onSlideStart(slide) {
-      console.log(slide)
-      this.sliding = true
+      console.log(slide);
+      this.sliding = true;
     },
     onSlideEnd(slide) {
       console.log(slide);
-      this.sliding = false
+      this.sliding = false;
     },
     onSearch() {
-      console.log("onSearch called")
-    }
-  }
+      console.log("onSearch called");
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 </style>
