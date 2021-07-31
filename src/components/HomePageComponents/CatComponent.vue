@@ -35,7 +35,7 @@
                       <b-dropdown-item
                         v-for="(item, index) in categories"
                         :key="index"
-                        >{{ item }}</b-dropdown-item
+                        >{{ item.name }}</b-dropdown-item
                       >
                     </b-dropdown>
                   </div>

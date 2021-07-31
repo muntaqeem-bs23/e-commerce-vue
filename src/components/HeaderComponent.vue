@@ -2,9 +2,9 @@
 		<header class="header">
         <div class="container">
             <div class="header-inner">
-                <div class="logo">
+                <a href="/" class="logo">
                     <img src="../assets/images/logo.png" alt="">
-                </div>
+                </a>
                 <div class="header-icon">
                     <span class="d-inline-block mr-3">
                         <a href="">
